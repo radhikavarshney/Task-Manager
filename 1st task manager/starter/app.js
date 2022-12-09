@@ -1,6 +1,7 @@
 const exp = require('express')
 const app = exp()
 const tasks = require('./route/tasks')
+const connectDB=require('./db/connect')
 
 const port = 3000
 
@@ -12,6 +13,9 @@ app.get('/hello',(req,res)=>{
 })
 
 app.use('/api/v1/tasks',tasks)
+
+
+
 
 
 app.listen(port,console.log(`User hit the server ${port}...`)
