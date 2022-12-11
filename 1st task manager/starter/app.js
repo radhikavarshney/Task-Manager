@@ -5,13 +5,8 @@ const connectDB=require('./db/connect')
 require('dotenv').config()
 
 const port = 3000
-
+app.use(exp.static("./public"))
 app.use(exp.json())
-
-
-app.get('/hello',(req,res)=>{
-    res.send('Task Manager App')
-})
 
 app.use('/api/v1/tasks',tasks)
 
