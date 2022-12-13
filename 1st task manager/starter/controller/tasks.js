@@ -11,6 +11,7 @@ try {
 
     
 } catch (error) {
+    // console.log(error);
     res.status(500).json({msg:error})
         
 }
@@ -77,7 +78,7 @@ const updateTask = async (req,res)=>{
  
 }
 
-module.exports = {
+module.exports`` = {
     getAllTasks,
     createTask,
     getTask,
